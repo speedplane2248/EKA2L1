@@ -1538,7 +1538,9 @@ namespace eka2l1 {
 
         if (ImGui::Begin("About!", &should_show_about)) {
             ImGui::Columns(2);
-
+            ImGui::SetColumnWidth(0, 240);
+            ImGui::SetColumnWidth(1, 240);
+            ImGui::SetWindowSize({0, 0,});
             if (phony_icon) {
                 ImGui::Image(reinterpret_cast<ImTextureID>(phony_icon), ImVec2(static_cast<float>(phony_size.x), static_cast<float>(phony_size.y)));
             }
